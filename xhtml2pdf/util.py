@@ -22,7 +22,7 @@ from typing import Any
 import arabic_reshaper
 import reportlab
 import reportlab.pdfbase._cidfontdata
-from bidi.algorithm import get_display
+# from bidi.algorithm import get_display
 from reportlab.lib.colors import Color, toColor
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT, TA_RIGHT
 from reportlab.lib.units import cm, inch
@@ -598,6 +598,7 @@ def detect_language(name):
 
 
 def arabic_format(text, language):
+    from bidi.algorithm import get_display
     # Note: right now all of the languages are treated the same way.
     # But maybe in the future we have to for example implement something
     # for "hebrew" that isn't used in "arabic"
