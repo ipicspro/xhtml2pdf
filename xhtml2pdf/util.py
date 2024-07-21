@@ -599,6 +599,7 @@ def detect_language(name):
 
 def arabic_format(text, language):
     from bidi.algorithm import get_display
+    
     # Note: right now all of the languages are treated the same way.
     # But maybe in the future we have to for example implement something
     # for "hebrew" that isn't used in "arabic"
